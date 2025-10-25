@@ -337,7 +337,12 @@ export default function Home() {
 
       {/* COURSES SECTION */}
       <section id="courses" className="px-6 md:px-10 py-20 bg-white/70 dark:bg-zinc-900/70">
-        <h2 className="text-3xl font-bold text-center mb-12">Courses for Students</h2>
+       <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent 
+               bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 
+               drop-shadow-lg animate-fadeIn">
+  Courses for Students
+</h2>
+
 
         {/* Horizontal Scroll Layout (All Screens) */}
         <div className="overflow-x-auto scroll-smooth snap-x snap-mandatory py-6 no-scrollbar">
