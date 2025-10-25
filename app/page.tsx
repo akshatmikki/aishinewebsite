@@ -266,22 +266,22 @@ export default function Home() {
               </motion.li>
             ))}
           </motion.ul>
-         <Link href="/aboutus" passHref>
-  <motion.button
-    whileHover={{
-      scale: 1.05,
-      backgroundPositionX: "200%", // Move gradient on hover
-      transition: { duration: 0.8, ease: "easeInOut" },
-    }}
-    whileTap={{ scale: 0.95 }}
-    className="mt-6 px-8 py-3 font-semibold text-white rounded-xl 
+          <Link href="/aboutus" passHref>
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+                backgroundPositionX: "200%", // Move gradient on hover
+                transition: { duration: 0.8, ease: "easeInOut" },
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-6 px-8 py-3 font-semibold text-white rounded-xl 
                bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 
                bg-[length:200%_100%] bg-left 
                shadow-lg transition-all duration-300"
-  >
-    Learn More
-  </motion.button>
-</Link>
+            >
+              Learn More
+            </motion.button>
+          </Link>
         </motion.div>
 
         {/* Right Image */}

@@ -63,7 +63,7 @@ export default function Footer() {
           <ul className="space-y-2 text-gray-700">
             <li>
               <Link
-                href="/contact"
+                href="/contactus"
                 className="hover:text-blue-500 transition-colors"
               >
                 Contact

@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <div className="relative w-full z-50">
-      <AINavbar className="overflow-visible backdrop-blur-md bg-white/50 dark:bg-black/20 border-b border-zinc-200 dark:border-zinc-800 shadow-sm">
+      <AINavbar className="overflow-visible backdrop-blur-md bg-black dark:bg-black border-b border-zinc-200 dark:border-zinc-800 shadow-sm">
         {/* Desktop Navigation */}
         <NavBody className="overflow-visible">
           <NavbarLogo className="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
