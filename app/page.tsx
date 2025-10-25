@@ -3,6 +3,7 @@ import React, { useState, useId, useRef, useEffect } from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star, Rocket, Book, Lightbulb } from "lucide-react";
@@ -265,6 +266,22 @@ export default function Home() {
               </motion.li>
             ))}
           </motion.ul>
+         <Link href="/aboutus" passHref>
+  <motion.button
+    whileHover={{
+      scale: 1.05,
+      backgroundPositionX: "200%", // Move gradient on hover
+      transition: { duration: 0.8, ease: "easeInOut" },
+    }}
+    whileTap={{ scale: 0.95 }}
+    className="mt-6 px-8 py-3 font-semibold text-white rounded-xl 
+               bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 
+               bg-[length:200%_100%] bg-left 
+               shadow-lg transition-all duration-300"
+  >
+    Learn More
+  </motion.button>
+</Link>
         </motion.div>
 
         {/* Right Image */}
