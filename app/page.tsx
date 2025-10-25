@@ -68,7 +68,7 @@ export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   // Floating particles background
- useEffect(() => {
+  useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -185,7 +185,7 @@ export default function Home() {
 
         {/* Text Content */}
         <motion.div
-          className="relative z-10 max-w-3xl"
+          className="relative z-10 max-w-4xl"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -193,7 +193,7 @@ export default function Home() {
           <h1 className="text-6xl md:text-7xl font-extrabold text-gray-800 dark:text-gray-100 drop-shadow-[2px_2px_8px_rgba(0,0,0,0.5)]">
             Empowering the Future with Human + AI Collaboration
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-gray-800 dark:text-gray-100 drop-shadow-[1px_1px_4px_rgba(0,0,0,0.4)]">
+          <p className="mt-6 text-xl md:text-2xl text-gray-700 dark:text-gray-700 drop-shadow-[1px_1px_4px_rgba(0,0,0,0.4)]">
             Learn AI through interactive courses, real-world projects, and expert mentorship.
           </p>
           <div className="mt-10 flex justify-center gap-4">
@@ -337,11 +337,11 @@ export default function Home() {
 
       {/* COURSES SECTION */}
       <section id="courses" className="px-6 md:px-10 py-20 bg-white/70 dark:bg-zinc-900/70">
-       <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent 
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-12 bg-clip-text text-transparent 
                bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 
                drop-shadow-lg animate-fadeIn">
-  Courses for Students
-</h2>
+          Courses for Students
+        </h2>
 
 
         {/* Horizontal Scroll Layout (All Screens) */}

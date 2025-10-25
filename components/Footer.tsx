@@ -13,11 +13,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-10 px-6">
         {/* Company */}
         <div className="space-y-4">
-          <h4 className="font-bold text-lg text-blue-700">Company</h4>
+          <h4 className="font-bold text-lg text-blue-700">AIShine</h4>
           <ul className="space-y-2 text-gray-700">
             <li>
               <Link
-                href="#about"
+                href="/aboutus"
                 className="hover:text-blue-500 transition-colors"
               >
                 About Us

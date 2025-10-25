@@ -7,6 +7,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
+import Link from "next/link";
 
 import React, { useRef, useState } from "react";
 
@@ -237,8 +238,8 @@ interface NavbarLogoProps {
 
 export const NavbarLogo = ({ children = "Startup", className }: NavbarLogoProps) => {
   return (
-    <a
-      href="#"
+    <Link
+      href="/"
       className={cn(
         "relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black",
         className
@@ -251,7 +252,7 @@ export const NavbarLogo = ({ children = "Startup", className }: NavbarLogoProps)
         height={30}
       />
       <span className="font-medium text-black dark:text-white">{children}</span>
-    </a>
+    </Link>
   );
 };
 

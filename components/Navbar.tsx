@@ -17,12 +17,14 @@ export default function Navbar() {
   const navItems = [
     {
       name: "About Us",
-      link: "#aboutus"
+      link: "/aboutus"
     },
-    { name: "Courses", submenu: [
+    {
+      name: "Courses", submenu: [
         { name: "Student Courses", link: "#course1" },
         { name: "Corperate AI Training", link: "#course2" },
-      ], },
+      ],
+    },
     { name: "Blog", link: "#blog" },
   ];
 
@@ -34,7 +36,9 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <NavBody className="overflow-visible">
           <NavbarLogo className="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
-            AIShine
+            
+              AIShine
+           
           </NavbarLogo>
 
           <div className="flex items-center gap-8">
