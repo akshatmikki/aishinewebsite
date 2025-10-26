@@ -20,19 +20,20 @@ export default function Navbar() {
       link: "/aboutus"
     },
     {
-      name: "Courses", submenu: [
+      name: "Programs", submenu: [
         { name: "Student Courses", link: "#course1" },
         { name: "Corperate AI Training", link: "#course2" },
       ],
     },
     { name: "Blog", link: "#blog" },
+    {name:"Contact Us", link:"/contactus"}
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <div className="relative w-full z-50">
-      <AINavbar className="overflow-visible backdrop-blur-md bg-black dark:bg-black border-b border-zinc-200 dark:border-zinc-800 shadow-sm">
+     <AINavbar className="overflow-visible backdrop-blur-md bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 border-b border-transparent shadow-md">
         {/* Desktop Navigation */}
         <NavBody className="overflow-visible">
           <NavbarLogo className="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
@@ -45,7 +46,7 @@ export default function Navbar() {
             {navItems.map((item, idx) =>
               item.submenu ? (
                 <div key={idx} className="relative group">
-                  <span className="cursor-pointer text-neutral-700 dark:text-neutral-300 hover:text-indigo-500 transition-colors">
+                  <span className="cursor-pointer text-white dark:text-white hover:text-black transition-colors">
                     {item.name}
                   </span>
                   {/* Dropdown */}
@@ -67,7 +68,7 @@ export default function Navbar() {
                 <a
                   key={idx}
                   href={item.link}
-                  className="text-neutral-700 dark:text-neutral-300 hover:text-indigo-500 transition-colors"
+                  className="text-white dark:text-white hover:text-black transition-colors"
                 >
                   {item.name}
                 </a>

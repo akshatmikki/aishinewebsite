@@ -9,6 +9,29 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star, Rocket, Book, Lightbulb } from "lucide-react";
 
 const benefitIcons = [Star, Rocket, Book, Lightbulb];
+const slides = [
+  {
+    id: 1,
+    image: "/banner.png",
+    title: "Empowering the Future with Human + AI Collaboration",
+    subtitle:
+      "Learn AI through interactive courses, real-world projects, and expert mentorship.",
+  },
+  {
+    id: 2,
+    image: "/banner2.png",
+    title: "Discover the Power of Generative AI",
+    subtitle:
+      "Unleash your creativity with tools that blend human intuition and artificial intelligence.",
+  },
+  {
+    id: 3,
+    image: "/banner3.png",
+    title: "Shape Tomorrow’s World with AI Skills",
+    subtitle:
+      "Master in-demand technologies and become a leader in the AI-driven era.",
+  },
+];
 
 export default function Home() {
   // ✅ Define courses before useState
@@ -162,41 +185,73 @@ export default function Home() {
     return () => window.removeEventListener("keydown", handleEscape);
   }, [activeCourse]);
 
+  const [current, setCurrent] = useState(0);
+
+  // Auto-slide every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 10000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <main className="min-h-screen flex flex-col font-sans from-sky-50 via-white to-pink-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950 text-zinc-800 dark:text-white scroll-smooth">
       <Navbar />
 
       {/* HERO SECTION */}
-      <section
-        id="hero"
-        className="relative w-full h-screen flex flex-col justify-center items-center px-10 text-center overflow-hidden"
-      >
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/banner.png"
-            alt="Hero Banner"
-            fill
-            className="object-cover object-center"
-          />
-        </div>
+     <section
+      id="hero"
+      className="relative w-full h-screen flex flex-col justify-center items-center text-center overflow-hidden"
+    >
+      {/* Image Slider */}
+      <div className="absolute inset-0 z-0">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={slides[current].id}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1.05 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={slides[current].image}
+              alt={slides[current].title}
+              fill
+              priority
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-pink-100/30 to-sky-100/30"></div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
 
-        {/* Overlay */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-white/30 via-pink-100/30 to-sky-100/30"></div>
-
-        {/* Text Content */}
+      {/* Text Content */}
+      <AnimatePresence mode="wait">
         <motion.div
-          className="relative z-10 max-w-4xl"
+          key={slides[current].title}
+          className="relative z-10 max-w-4xl px-6"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -40 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-6xl md:text-7xl font-extrabold text-gray-800 dark:text-gray-100 drop-shadow-[2px_2px_8px_rgba(0,0,0,0.5)]">
-            Empowering the Future with Human + AI Collaboration
-          </h1>
-          <p className="mt-6 text-xl md:text-2xl text-gray-700 dark:text-gray-700 drop-shadow-[1px_1px_4px_rgba(0,0,0,0.4)]">
-            Learn AI through interactive courses, real-world projects, and expert mentorship.
-          </p>
+          <h1
+  className="text-5xl md:text-7xl font-extrabold 
+             bg-gradient-to-r text-white
+              bg-clip-text drop-shadow-[2px_2px_8px_rgba(0,0,0,0.5)]"
+>
+  {slides[current].title}
+</h1>
+
+<p
+  className="mt-6 text-xl md:text-2xl 
+             bg-gradient-to-r text-grey-800 bg-clip-text drop-shadow-[1px_1px_4px_rgba(0,0,0,0.4)]"
+>
+  {slides[current].subtitle}
+</p>
+
           <div className="mt-10 flex justify-center gap-4">
             <a
               href="#courses"
@@ -212,7 +267,24 @@ export default function Home() {
             </a>
           </div>
         </motion.div>
-      </section>
+      </AnimatePresence>
+
+      {/* Dots Navigation */}
+      <div className="absolute bottom-8 flex gap-3 z-20">
+        {slides.map((_, index) => (
+          <button
+          title="scroll"
+            key={index}
+            onClick={() => setCurrent(index)}
+            className={`w-3 h-3 rounded-full transition-all ${
+              current === index
+                ? "bg-pink-500 scale-125"
+                : "bg-white/70 hover:bg-pink-300"
+            }`}
+          />
+        ))}
+      </div>
+    </section>
 
       {/* ABOUT SECTION */}
       <section
