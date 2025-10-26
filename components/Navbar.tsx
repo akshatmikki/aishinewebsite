@@ -84,13 +84,33 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         <MobileNav>
-          <MobileNavHeader>
-            <NavbarLogo className="text-xl font-semibold">AIshine</NavbarLogo>
-            <MobileNavToggle
-              isOpen={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            />
-          </MobileNavHeader>
+          <MobileNavHeader className="flex items-center justify-between w-full">
+  <NavbarLogo className="text-xl font-semibold text-white">AIshine</NavbarLogo>
+
+  {/* Buttons beside hamburger */}
+  <div className="flex items-center gap-3">
+    <NavbarButton
+      variant="secondary"
+      className="px-3 py-1 text-sm"
+    >
+      Login
+    </NavbarButton>
+    <NavbarButton
+      variant="primary"
+      className="px-3 py-1 text-sm"
+    >
+      Book a Call
+    </NavbarButton>
+
+    {/* Hamburger toggle */}
+    <MobileNavToggle
+      isOpen={isMobileMenuOpen}
+      onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+    />
+  </div>
+</MobileNavHeader>
+
+
 
           <MobileNavMenu
             isOpen={isMobileMenuOpen}
@@ -124,7 +144,7 @@ export default function Navbar() {
                 </a>
               )
             )}
-            <div className="flex w-full flex-col gap-4 mt-4">
+            {/* <div className="flex w-full flex-col gap-4 mt-4">
               <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="secondary"
@@ -139,7 +159,7 @@ export default function Navbar() {
               >
                 Book a Call
               </NavbarButton>
-            </div>
+            </div> */}
           </MobileNavMenu>
         </MobileNav>
       </AINavbar>
