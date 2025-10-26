@@ -19,14 +19,14 @@ const slides = [
   },
   {
     id: 2,
-    image: "/banner2.png",
+    image: "/banner3.png",
     title: "Discover the Power of Generative AI",
     subtitle:
       "Unleash your creativity with tools that blend human intuition and artificial intelligence.",
   },
   {
     id: 3,
-    image: "/banner3.png",
+    image: "/banner.png",
     title: "Shape Tomorrow’s World with AI Skills",
     subtitle:
       "Master in-demand technologies and become a leader in the AI-driven era.",
