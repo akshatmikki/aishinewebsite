@@ -21,7 +21,7 @@ export default function Navbar() {
     },
     {
       name: "Programs", submenu: [
-        { name: "Student Courses", link: "#course1" },
+        { name: "Student Courses", link: "/studentcourse" },
         { name: "Corperate AI Training", link: "#course2" },
       ],
     },
@@ -77,8 +77,8 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Login</NavbarButton>
-            <NavbarButton variant="primary">Talk to Us</NavbarButton>
+            <NavbarButton variant="secondary" href="https://aishine.edmingle.com/">Login</NavbarButton>
+            <NavbarButton variant="primary" href="/contactus">Talk to Us</NavbarButton>
           </div>
         </NavBody>
 
@@ -90,6 +90,7 @@ export default function Navbar() {
             {/* Buttons beside hamburger */}
             <div className="flex items-center gap-3">
               <NavbarButton
+              href="https://aishine.edmingle.com/"
                 variant="secondary"
                 className="px-3 py-1 text-sm"
               >
@@ -110,8 +111,6 @@ export default function Navbar() {
               />
             </div>
           </MobileNavHeader>
-
-
 
           <MobileNavMenu
             isOpen={isMobileMenuOpen}

@@ -40,7 +40,7 @@ export default function Footer() {
           <ul className="space-y-2 text-gray-700">
             <li>
               <Link
-                href="#courses"
+                href="/studentcourse"
                 className="hover:text-blue-500 transition-colors"
               >
                 Student Courses
