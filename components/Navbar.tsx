@@ -26,20 +26,20 @@ export default function Navbar() {
       ],
     },
     { name: "Blog", link: "#blog" },
-    {name:"Contact Us", link:"/contactus"}
+    { name: "Contact Us", link: "/contactus" }
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <div className="relative w-full z-50">
-     <AINavbar className="overflow-visible backdrop-blur-md bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 border-b border-transparent shadow-md">
+      <AINavbar className="overflow-visible backdrop-blur-md bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 border-b border-transparent shadow-md">
         {/* Desktop Navigation */}
         <NavBody className="overflow-visible">
           <NavbarLogo className="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
-            
-              AIShine
-           
+
+            AIShine
+
           </NavbarLogo>
 
           <div className="flex items-center gap-8">
@@ -78,37 +78,38 @@ export default function Navbar() {
 
           <div className="flex items-center gap-4">
             <NavbarButton variant="secondary">Login</NavbarButton>
-            <NavbarButton variant="primary">Book a Call</NavbarButton>
+            <NavbarButton variant="primary">Talk to Us</NavbarButton>
           </div>
         </NavBody>
 
         {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader className="flex items-center justify-between w-full">
-  <NavbarLogo className="text-xl font-semibold text-white">AIshine</NavbarLogo>
+            <NavbarLogo className="text-xl font-semibold text-white">AIshine</NavbarLogo>
 
-  {/* Buttons beside hamburger */}
-  <div className="flex items-center gap-3">
-    <NavbarButton
-      variant="secondary"
-      className="px-3 py-1 text-sm"
-    >
-      Login
-    </NavbarButton>
-    <NavbarButton
-      variant="primary"
-      className="px-3 py-1 text-sm"
-    >
-      Book a Call
-    </NavbarButton>
+            {/* Buttons beside hamburger */}
+            <div className="flex items-center gap-3">
+              <NavbarButton
+                variant="secondary"
+                className="px-3 py-1 text-sm"
+              >
+                Login
+              </NavbarButton>
+              <NavbarButton
+              href="/contactus"
+                variant="primary"
+                className="px-3 py-1 text-sm"
+              >
+                Talk to Us
+              </NavbarButton>
 
-    {/* Hamburger toggle */}
-    <MobileNavToggle
-      isOpen={isMobileMenuOpen}
-      onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-    />
-  </div>
-</MobileNavHeader>
+              {/* Hamburger toggle */}
+              <MobileNavToggle
+                isOpen={isMobileMenuOpen}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              />
+            </div>
+          </MobileNavHeader>
 
 
 
