@@ -17,16 +17,17 @@ export default function Navbar() {
   const navItems = [
     {
       name: "About Us",
-      link: "/aboutus"
+      link: "/aboutus",
     },
     {
-      name: "Programs", submenu: [
+      name: "Programs",
+      submenu: [
         { name: "Student Courses", link: "/studentcourse" },
         { name: "Corperate AI Training", link: "#course2" },
       ],
     },
     { name: "Blog", link: "#blog" },
-    { name: "Contact Us", link: "/contactus" }
+    { name: "Contact Us", link: "/contactus" },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,9 +38,7 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <NavBody className="overflow-visible">
           <NavbarLogo className="text-2xl font-bold bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
-
             AIShine
-
           </NavbarLogo>
 
           <div className="flex items-center gap-8">
@@ -50,9 +49,17 @@ export default function Navbar() {
                     {item.name}
                   </span>
                   {/* Dropdown */}
-                  <div className="absolute left-0 mt-2 w-40 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-md shadow-lg 
-                                  opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 
-                                  pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-50">
+                  <div
+                    className="absolute left-0 mt-0 w-40 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-md shadow-lg
+      opacity-0 translate-y-0 group-hover:opacity-100 group-hover:translate-y-0
+      pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200 z-50"
+                    onMouseEnter={(e) =>
+                      e.currentTarget.classList.add("opacity-100")
+                    }
+                    onMouseLeave={(e) =>
+                      e.currentTarget.classList.remove("opacity-100")
+                    }
+                  >
                     {item.submenu.map((sub, subIdx) => (
                       <a
                         key={subIdx}
@@ -77,27 +84,36 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary" href="https://aishine.edmingle.com/">Login</NavbarButton>
-            <NavbarButton variant="primary" href="/contactus">Talk to Us</NavbarButton>
+            <NavbarButton
+              variant="secondary"
+              href="https://aishine.edmingle.com/"
+            >
+              Login
+            </NavbarButton>
+            <NavbarButton variant="primary" href="/contactus">
+              Talk to Us
+            </NavbarButton>
           </div>
         </NavBody>
 
         {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader className="flex items-center justify-between w-full">
-            <NavbarLogo className="text-xl font-semibold text-white">AIshine</NavbarLogo>
+            <NavbarLogo className="text-xl font-semibold text-white">
+              AIshine
+            </NavbarLogo>
 
             {/* Buttons beside hamburger */}
             <div className="flex items-center gap-3">
               <NavbarButton
-              href="https://aishine.edmingle.com/"
+                href="https://aishine.edmingle.com/"
                 variant="secondary"
                 className="px-3 py-1 text-sm"
               >
                 Login
               </NavbarButton>
               <NavbarButton
-              href="/contactus"
+                href="/contactus"
                 variant="primary"
                 className="px-3 py-1 text-sm"
               >

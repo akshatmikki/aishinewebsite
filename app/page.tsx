@@ -68,6 +68,21 @@ const courseDetails = {
       enrollUrl: "/AIcourses/ai-fundamentals",
       description: "Master AI concepts, practical ML, and modern tools",
     },
+    {
+      title: "Machine Learning Basics",
+      enrollUrl: "/AIcourses/ai-fundamentals",
+      description: "Hands-on ML algorithms & model building",
+    },
+    {
+      title: "Data Science with Python",
+      enrollUrl: "/AIcourses/ai-fundamentals",
+      description: "Data analysis, visualization & preprocessing",
+    },
+    {
+      title: "Deep Learning Foundations",
+      enrollUrl: "/AIcourses/ai-fundamentals",
+      description: "Neural networks, CNNs, RNNs & frameworks",
+    },
   ],
   "ai-for-business": [
     {
@@ -221,9 +236,10 @@ export default function Home() {
               {slides[current].title}
             </h1>
 
-            <p className="mt-6 text-xl md:text-2xl bg-gradient-to-r text-grey-800 bg-clip-text drop-shadow-[1px_1px_4px_rgba(0,0,0,0.4)]">
+            <p className="mt-6 text-xl md:text-2xl text-white font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)] text-center">
               {slides[current].subtitle}
             </p>
+
             <div className="mt-10 flex justify-center gap-4">
               <a
                 href="#courses"
@@ -443,49 +459,63 @@ export default function Home() {
               </div>
             ))}
           </div>
-          {activeCategory &&
-            courseDetails[activeCategory as keyof typeof courseDetails] && (
-              <div className="mt-10 w-full flex flex-col items-center">
-                <div className="max-w-2xl bg-gradient-to-r from-purple-100 to-pink-100 dark:from-zinc-800 dark:to-zinc-900 border border-purple-400/30 rounded-2xl shadow-xl p-6 flex flex-col gap-4 w-full">
-                  {courseDetails[
-                    activeCategory as keyof typeof courseDetails
-                  ].map(
-                    (
-                      item: {
-                        title: string;
-                        enrollUrl: string;
-                        description: string;
-                      },
-                      idx: number
-                    ) => (
-                      <div
-                        key={idx}
-                        className="flex items-center justify-between gap-4 flex-wrap"
-                      >
-                        <div>
-                          <h4 className="text-lg font-bold text-purple-900 dark:text-purple-200 mb-0">
-                            {item.title}
-                          </h4>
-                          <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
-                            {item.description}
-                          </p>
-                        </div>
-                        <Link
-                          href={item.enrollUrl}
-                          className="ml-auto flex-shrink-0"
-                        >
-                          <button className="px-8 py-3 rounded-lg bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-bold shadow hover:scale-105 transition">
-                            Enroll
-                          </button>
-                        </Link>
-                      </div>
-                    )
-                  )}
-                </div>
-              </div>
-            )}
         </div>
       </section>
+
+      <AnimatePresence>
+        {activeCategory &&
+          courseDetails[activeCategory as keyof typeof courseDetails] && (
+            <motion.section
+              key={activeCategory}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 40 }}
+              transition={{ duration: 0.35, ease: "easeInOut" }}
+              className="w-full flex flex-col items-center px-2 md:px-10 py-8 md:py-14 max-w-6xl mx-auto bg-gradient-to-r from-purple-50 to-pink-50 dark:from-zinc-800 dark:to-zinc-900 rounded-2xl shadow-xl mb-14"
+            >
+              {/* Centered Heading */}
+              <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-[#d946ef] via-[#7c3aed] to-[#2563eb] bg-clip-text text-transparent mb-5 drop-shadow-sm text-center">
+                <span>✨ All Courses</span>
+              </h2>
+              {/* Course Cards */}
+              <div className="w-full overflow-x-auto no-scrollbar">
+                <div
+                  className="flex flex-nowrap gap-6 md:gap-8 px-2 md:px-1 pb-2"
+                  style={{ minHeight: "270px" }}
+                >
+                  {courseDetails[
+                    activeCategory as keyof typeof courseDetails
+                  ].map((course, idx) => (
+                    <div
+                      key={idx}
+                      className="flex flex-col justify-between items-center text-center bg-white/90 dark:bg-zinc-900 shadow-lg rounded-2xl border border-purple-100 dark:border-zinc-800
+        min-w-[260px] w-[290px] max-w-[290px] h-[250px] mx-auto transition-all"
+                    >
+                      <div className="flex-grow w-full flex flex-col justify-center items-center">
+                        <h3 className="text-lg md:text-xl font-extrabold bg-gradient-to-r from-fuchsia-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent mb-2 tracking-tight drop-shadow-md leading-snug">
+                          {course.title}
+                        </h3>
+                        <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 font-medium mb-4 leading-tight">
+                          {course.description}
+                        </p>
+                      </div>
+                      <Link
+                        href={course.enrollUrl}
+                        className="w-full flex justify-center"
+                      >
+                        <button className="py-2 px-6 font-bold text-base md:text-lg rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-lg transition hover:scale-105 focus:outline-none focus:ring-4 focus:ring-pink-300 w-[80%] flex items-center justify-center">
+                          <span className="drop-shadow-[0_1.5px_2px_rgba(0,0,0,0.14)]">
+                            🚀 Enroll
+                          </span>
+                        </button>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.section>
+          )}
+      </AnimatePresence>
 
       {/* CORPORATE TRAINING */}
       <section
