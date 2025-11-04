@@ -23,7 +23,7 @@ export default function Navbar() {
       name: "Programs",
       submenu: [
         { name: "Student Courses", link: "/studentcourse" },
-        { name: "Corperate AI Training", link: "#course2" },
+        { name: "Corporate AI Training", link: "#course2" },
       ],
     },
     { name: "Blog", link: "#blog" },
