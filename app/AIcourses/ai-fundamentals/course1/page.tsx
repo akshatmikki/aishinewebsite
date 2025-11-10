@@ -169,12 +169,12 @@ export default function AIFundamentals() {
 
       <section className="max-w-4xl mx-auto px-6 mb-12">
         <div className="bg-purple-700 bg-opacity-40 rounded-xl p-8 shadow-lg mb-8">
-          <h3 className="text-2xl font-semibold mb-4">What You'll Build</h3>
+          <h3 className="text-2xl font-semibold mb-4">Learning Outcomes</h3>
           <ul className="list-disc list-inside space-y-2 text-purple-200">
-            <li>A personal smart AI assistant for studies and daily ideas</li>
-            <li>No-code website & quiz projects</li>
-            <li>Presentations, comics, images, and creative storytelling</li>
-            <li>Mini-podcast or video explainer using AI voice tools</li>
+            <li>Build a personal smart AI assistant for studies and daily ideas</li>
+            <li>Create no-code websites and interactive quizzes</li>
+            <li>Develop presentations, comics, images, and creative storytelling</li>
+            <li>Produce a mini-podcast or video explainer using AI voice tools</li>
           </ul>
         </div>
 

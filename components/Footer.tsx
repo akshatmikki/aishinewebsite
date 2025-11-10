@@ -23,14 +23,14 @@ export default function Footer() {
                 About Us
               </Link>
             </li>
-            <li>
+            {/*<li>
               <Link
                 href="/blog"
                 className="hover:text-blue-500 transition-colors"
               >
                 Blog
               </Link>
-            </li>
+            </li>*/}
           </ul>
         </div>
 
@@ -40,20 +40,20 @@ export default function Footer() {
           <ul className="space-y-2 text-gray-700">
             <li>
               <Link
-                href="/studentcourse"
+                href="/#courses"
                 className="hover:text-blue-500 transition-colors"
               >
                 Student Courses
               </Link>
             </li>
-            <li>
+            {/*<li>
               <Link
                 href="#corporate"
                 className="hover:text-blue-500 transition-colors"
               >
                 Corporate Training
               </Link>
-            </li>
+            </li>*/}
           </ul>
         </div>
 

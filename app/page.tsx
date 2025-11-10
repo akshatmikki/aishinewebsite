@@ -44,16 +44,16 @@ const courses = [
     title: "AI for Business",
     description: "Leverage AI in business applications",
     slug: "ai-for-business",
-    image: "/aibusiness.png",
+    image: "/AI-For-Business-Heres-How-You-Can-Transform-Yours.png",
   },
   {
     title: "AI Project Labs",
     description: "Build real-world AI projects",
     slug: "ai-project-labs",
-    image: "/ai.png",
+    image: "/AI_Projects_Heading_900x650.png",
   },
   {
-    title: "Advanced AI Topics",
+    title: "Advanced AI Learning",
     description: "Explore cutting-edge AI methods",
     slug: "advanced-ai-topics",
     image: "/aibusiness.png",
@@ -65,22 +65,22 @@ const courseDetails = {
   "ai-fundamentals": [
     {
       title: "Artificial Intelligence Course for Students",
-      enrollUrl: "/AIcourses/ai-fundamentals",
+      enrollUrl: "/AIcourses/ai-fundamentals/course1",
       description: "Master AI concepts, practical ML, and modern tools",
     },
     {
       title: "Machine Learning Basics",
-      enrollUrl: "/AIcourses/ai-fundamentals",
+      enrollUrl: "/AIcourses/ai-fundamentals/course2",
       description: "Hands-on ML algorithms & model building",
     },
     {
       title: "Data Science with Python",
-      enrollUrl: "/AIcourses/ai-fundamentals",
+      enrollUrl: "/AIcourses/ai-fundamentals/course3",
       description: "Data analysis, visualization & preprocessing",
     },
     {
       title: "Deep Learning Foundations",
-      enrollUrl: "/AIcourses/ai-fundamentals",
+      enrollUrl: "/AIcourses/ai-fundamentals/course4",
       description: "Neural networks, CNNs, RNNs & frameworks",
     },
   ],
@@ -93,7 +93,7 @@ const courseDetails = {
   ],
   "ai-project-labs": [
     {
-      title: "Capstone AI Project Lab",
+      title: "Capstone AI Project",
       enrollUrl: "/AIcourses/ai-project-labs",
       description: "Team-based, real-world AI build challenges",
     },
@@ -248,7 +248,7 @@ export default function Home() {
                 Explore Courses
               </a>
               <a
-                href="#contact"
+                href="/contactus"
                 className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg hover:scale-105 transition-transform"
               >
                 Talk to Us
@@ -471,7 +471,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 40 }}
               transition={{ duration: 0.35, ease: "easeInOut" }}
-              className="w-full flex flex-col items-center px-2 md:px-10 py-8 md:py-14 max-w-6xl mx-auto bg-gradient-to-r from-purple-50 to-pink-50 dark:from-zinc-800 dark:to-zinc-900 rounded-2xl shadow-xl mb-14"
+              className="w-full flex flex-col items-center px-2 md:px-10 py-8 md:py-14 max-w-6xl mx-auto bg-gradient-to-r from-purple-50 to-pink-50 dark:from-zinc-800 dark:to-zinc-900 rounded-2xl shadow-xl mb-14 border border-purple-200/60 dark:border-pink-700/40"
             >
               {/* Centered Heading */}
               <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-[#d946ef] via-[#7c3aed] to-[#2563eb] bg-clip-text text-transparent mb-5 drop-shadow-sm text-center">
@@ -489,7 +489,7 @@ export default function Home() {
                     <div
                       key={idx}
                       className="flex flex-col justify-between items-center text-center bg-white/90 dark:bg-zinc-900 shadow-lg rounded-2xl border border-purple-100 dark:border-zinc-800
-        min-w-[260px] w-[290px] max-w-[290px] h-[250px] mx-auto transition-all"
+min-w-[260px] w-[290px] max-w-[290px] h-[260px] mx-auto transition-all pb-3 pt-2"
                     >
                       <div className="flex-grow w-full flex flex-col justify-center items-center">
                         <h3 className="text-lg md:text-xl font-extrabold bg-gradient-to-r from-fuchsia-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent mb-2 tracking-tight drop-shadow-md leading-snug">
@@ -503,7 +503,7 @@ export default function Home() {
                         href={course.enrollUrl}
                         className="w-full flex justify-center"
                       >
-                        <button className="py-2 px-6 font-bold text-base md:text-lg rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-lg transition hover:scale-105 focus:outline-none focus:ring-4 focus:ring-pink-300 w-[80%] flex items-center justify-center">
+                        <button className="cursor-pointer py-2 px-6 font-bold text-base md:text-lg rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-lg transition hover:scale-105 focus:outline-none focus:ring-4 focus:ring-pink-300 w-[80%] flex items-center justify-center">
                           <span className="drop-shadow-[0_1.5px_2px_rgba(0,0,0,0.14)]">
                             🚀 Enroll
                           </span>

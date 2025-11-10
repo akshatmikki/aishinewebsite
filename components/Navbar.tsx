@@ -22,11 +22,11 @@ export default function Navbar() {
     {
       name: "Programs",
       submenu: [
-        { name: "Student Courses", link: "/studentcourse" },
-        { name: "Corporate AI Training", link: "#course2" },
+        { name: "Student Courses", link: "/#courses" },
+        //{ name: "Corporate AI Training", link: "#course2" },
       ],
     },
-    { name: "Blog", link: "#blog" },
+    //{ name: "Blog", link: "#blog" },
     { name: "Contact Us", link: "/contactus" },
   ];
 
@@ -84,14 +84,14 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-4">
-            <NavbarButton
+            {/*<NavbarButton
               variant="secondary"
               href="https://aishine.edmingle.com/"
             >
               Login
-            </NavbarButton>
-            <NavbarButton variant="primary" href="/contactus">
-              Talk to Us
+            </NavbarButton>*/}
+            <NavbarButton variant="primary" href="https://aishine.edmingle.com/">
+              Login
             </NavbarButton>
           </div>
         </NavBody>
