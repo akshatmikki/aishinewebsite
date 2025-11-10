@@ -17,7 +17,7 @@ export default function AIPage() {
   return (
     <div className="min-h-screen bg-black text-white antialiased">
         <Navbar />
-      {/* 1. Hero and CTA */}
+      1. Hero and CTA
       <HeroSection 
         courseName={courseName} 
         organization={organization} 
@@ -26,16 +26,16 @@ export default function AIPage() {
         roles={roles}
       />
       
-      {/* 2. Project Showcase */}
+      2. Project Showcase 
       <ProjectShowcase projects={projects} />
       
-      {/* 3. Curriculum Details */}
+      3. Curriculum Details 
       <CurriculumSection curriculum={curriculum} />
       
-      {/* 4. Mentor and Toolkit */}
+      4. Mentor and Toolkit 
       <MentorSection mentor={mentor} />
-      
-      {/* 5. Recognition and Final CTA */}
+       
+      5. Recognition and Final CTA 
       <RecognitionCTA prizes={prizes} />
        <div className="sticky bottom-0 left-0 right-0 bg-black/80 backdrop-blur-sm p-4 z-50 text-center border-t border-purple-900/50">
         <a href="#booking" className="inline-block w-full md:w-auto">
@@ -47,7 +47,7 @@ export default function AIPage() {
 
       <Footer />
 
-      {/* Sticky Final CTA */}
+      Sticky Final CTA 
      
     </div>
   );
