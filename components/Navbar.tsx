@@ -22,8 +22,10 @@ export default function Navbar() {
     {
       name: "Programs",
       submenu: [
-        { name: "Student Courses", link: "/#courses" },
-        //{ name: "Corporate AI Training", link: "#course2" },
+        { name: "Student Courses", category: "ai-fundamentals" },
+        { name: "AI for Business", category: "ai-for-business" },
+        { name: "AI Projects Lab", category: "ai-project-labs" },
+        { name: "Advanced AI Learning", category: "advanced-ai-topics" },
       ],
     },
     //{ name: "Blog", link: "#blog" },
@@ -45,29 +47,35 @@ export default function Navbar() {
             {navItems.map((item, idx) =>
               item.submenu ? (
                 <div key={idx} className="relative group">
-                  <span className="cursor-pointer text-white dark:text-white hover:text-black transition-colors">
+                  <span
+                    className="cursor-pointer text-white dark:text-white hover:text-black transition-colors select-none"
+                    style={{ cursor: "pointer" }}
+                  >
                     {item.name}
                   </span>
                   {/* Dropdown */}
                   <div
                     className="absolute left-0 mt-0 w-40 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-md shadow-lg
-      opacity-0 translate-y-0 group-hover:opacity-100 group-hover:translate-y-0
-      pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200 z-50"
-                    onMouseEnter={(e) =>
-                      e.currentTarget.classList.add("opacity-100")
-                    }
-                    onMouseLeave={(e) =>
-                      e.currentTarget.classList.remove("opacity-100")
-                    }
+  opacity-0 translate-y-0 group-hover:opacity-100 group-hover:translate-y-0
+  pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200 z-50"
                   >
                     {item.submenu.map((sub, subIdx) => (
-                      <a
+                      <button
                         key={subIdx}
-                        href={sub.link}
-                        className="block px-4 py-2 text-neutral-700 dark:text-neutral-300 hover:bg-indigo-50 dark:hover:bg-zinc-800 transition-colors"
+                        onClick={() => {
+                          window.dispatchEvent(
+                            new CustomEvent("openCourseCategory", {
+                              detail: sub.category,
+                            })
+                          );
+                          const section = document.getElementById("courses");
+                          if (section)
+                            section.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        className="block w-full text-left px-4 py-2 text-neutral-700 dark:text-neutral-300 hover:bg-indigo-50 dark:hover:bg-zinc-800 transition-colors cursor-pointer"
                       >
                         {sub.name}
-                      </a>
+                      </button>
                     ))}
                   </div>
                 </div>
@@ -90,7 +98,10 @@ export default function Navbar() {
             >
               Login
             </NavbarButton>*/}
-            <NavbarButton variant="primary" href="https://aishine.edmingle.com/">
+            <NavbarButton
+              variant="primary"
+              href="https://aishine.edmingle.com/"
+            >
               Login
             </NavbarButton>
           </div>
@@ -138,14 +149,22 @@ export default function Navbar() {
                   <span className="font-semibold">{item.name}</span>
                   <div className="flex flex-col pl-4 gap-2">
                     {item.submenu.map((sub, subIdx) => (
-                      <a
+                      <button
                         key={subIdx}
-                        href={sub.link}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="text-neutral-700 dark:text-neutral-300 hover:text-indigo-500 transition-colors"
+                        onClick={() => {
+                          window.dispatchEvent(
+                            new CustomEvent("openCourseCategory", {
+                              detail: sub.category,
+                            })
+                          );
+                          const section = document.getElementById("courses");
+                          if (section)
+                            section.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        className="block w-full text-left px-4 py-2 text-neutral-700 dark:text-neutral-300 hover:bg-indigo-50 dark:hover:bg-zinc-800 transition-colors"
                       >
                         {sub.name}
-                      </a>
+                      </button>
                     ))}
                   </div>
                 </div>

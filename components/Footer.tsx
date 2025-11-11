@@ -1,8 +1,19 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Linkedin, Instagram, Youtube, Twitter } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
+  // helper to trigger same event as Navbar
+  const handleOpenCategory = (category: string) => {
+    window.dispatchEvent(
+      new CustomEvent("openCourseCategory", { detail: category })
+    );
+    const section = document.getElementById("courses");
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <motion.footer
       initial={{ opacity: 0, y: 50 }}
@@ -23,14 +34,6 @@ export default function Footer() {
                 About Us
               </Link>
             </li>
-            {/*<li>
-              <Link
-                href="/blog"
-                className="hover:text-blue-500 transition-colors"
-              >
-                Blog
-              </Link>
-            </li>*/}
           </ul>
         </div>
 
@@ -39,21 +42,37 @@ export default function Footer() {
           <h4 className="font-bold text-lg text-blue-700">Programs</h4>
           <ul className="space-y-2 text-gray-700">
             <li>
-              <Link
-                href="/#courses"
-                className="hover:text-blue-500 transition-colors"
+              <button
+                onClick={() => handleOpenCategory("ai-fundamentals")}
+                className="hover:text-blue-500 transition-colors text-left w-full cursor-pointer"
               >
                 Student Courses
-              </Link>
+              </button>
             </li>
-            {/*<li>
-              <Link
-                href="#corporate"
-                className="hover:text-blue-500 transition-colors"
+            <li>
+              <button
+                onClick={() => handleOpenCategory("ai-for-business")}
+                className="hover:text-blue-500 transition-colors text-left w-full cursor-pointer"
               >
-                Corporate Training
-              </Link>
-            </li>*/}
+                AI for Business
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => handleOpenCategory("ai-project-labs")}
+                className="hover:text-blue-500 transition-colors text-left w-full cursor-pointer"
+              >
+                AI Projects Lab
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => handleOpenCategory("advanced-ai-topics")}
+                className="hover:text-blue-500 transition-colors text-left w-full cursor-pointer"
+              >
+                Advanced AI Learning
+              </button>
+            </li>
           </ul>
         </div>
 
@@ -104,6 +123,14 @@ export default function Footer() {
                 className="hover:text-blue-500 transition-colors"
               >
                 Terms & Conditions
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/refund"
+                className="hover:text-blue-500 transition-colors"
+              >
+                Refund Policy
               </Link>
             </li>
           </ul>

@@ -47,7 +47,7 @@ const courses = [
     image: "/AI-For-Business-Heres-How-You-Can-Transform-Yours.png",
   },
   {
-    title: "AI Project Labs",
+    title: "AI Projects Lab",
     description: "Build real-world AI projects",
     slug: "ai-project-labs",
     image: "/AI_Projects_Heading_900x650.png",
@@ -119,6 +119,35 @@ export default function Home() {
   const ref = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
+  // Type for category keys
+  type CourseCategory = keyof typeof courseDetails;
+  const [activeCategory, setActiveCategory] = useState<CourseCategory | null>(
+    null
+  );
+
+  // 🔥 Custom Event Listener (Navbar → Main page)
+  useEffect(() => {
+    const handleOpenCategory = (e: any) => {
+      setActiveCategory(e.detail);
+
+      // Scroll to the selected category card first
+      const card = document.getElementById(`course-${e.detail}`);
+      if (card) {
+        card.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      // Then scroll to the full All Courses section below it
+      setTimeout(() => {
+        const section = document.getElementById("courses");
+        if (section) section.scrollIntoView({ behavior: "smooth" });
+      }, 600);
+    };
+
+    window.addEventListener("openCourseCategory", handleOpenCategory);
+    return () =>
+      window.removeEventListener("openCourseCategory", handleOpenCategory);
+  }, []);
+
   // Particle background
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -177,11 +206,6 @@ export default function Home() {
   }, []);
 
   const [current, setCurrent] = useState(0);
-  // Define the possible keys
-  type CourseCategory = keyof typeof courseDetails;
-  const [activeCategory, setActiveCategory] = useState<CourseCategory | null>(
-    null
-  );
 
   // Auto-slide every 5 seconds
   useEffect(() => {
@@ -423,14 +447,17 @@ export default function Home() {
           <div className="flex gap-8 px-4">
             {courses.map((course) => (
               <div
+                id={`course-${course.slug}`}
                 key={course.title}
-                className={`min-w-[280px] sm:min-w-[300px] md:min-w-[320px] lg:min-w-[350px] bg-white dark:bg-neutral-900 rounded-2xl shadow-md hover:shadow-2xl transition-all cursor-pointer snap-center overflow-hidden flex flex-col
-                  ${
-                    activeCategory === course.slug
-                      ? "ring-2 ring-purple-400"
-                      : ""
-                  }
-                `}
+                className={`min-w-[280px] sm:min-w-[300px] md:min-w-[320px] lg:min-w-[350px] 
+    bg-white dark:bg-neutral-900 rounded-2xl shadow-md hover:shadow-2xl 
+    transition-all cursor-pointer snap-center overflow-hidden flex flex-col 
+    ${
+      activeCategory === course.slug
+        ? "ring-4 ring-pink-400 scale-105 shadow-xl pulse-once"
+        : ""
+    }
+  `}
                 onClick={() =>
                   setActiveCategory(
                     activeCategory === course.slug
