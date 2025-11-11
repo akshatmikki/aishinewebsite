@@ -1,5 +1,5 @@
 "use client";
-import React, { useId, useRef, useEffect, useState } from "react";
+import React, { useId, useRef, useEffect, useState, Suspense } from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -116,6 +116,14 @@ const benefits = [
 ];
 
 export default function Home() {
+  return (
+    <Suspense fallback={<div className="text-center py-20 text-lg">Loading...</div>}>
+      <HomeContent />
+    </Suspense>
+  );
+}
+
+function HomeContent() {
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -125,36 +133,33 @@ export default function Home() {
 
   // Type for category keys
   type CourseCategory = keyof typeof courseDetails;
-  const [activeCategory, setActiveCategory] = useState<CourseCategory | null>(
-    null
-  );
+  const [activeCategory, setActiveCategory] = useState<CourseCategory | null>(null);
 
   useEffect(() => {
-  if (categoryParam) {
-    setActiveCategory(categoryParam as CourseCategory);
+    if (categoryParam) {
+      setActiveCategory(categoryParam as CourseCategory);
 
-    // Step 1: Scroll to the specific course box first
-    const courseCard = document.getElementById(`course-${categoryParam}`);
-    if (courseCard) {
-      courseCard.scrollIntoView({ behavior: "smooth", block: "center" });
-      // Add a quick pulse animation manually for clarity
-      courseCard.classList.add("pulse-once");
-      setTimeout(() => courseCard.classList.remove("pulse-once"), 800);
+      // Step 1: Scroll to the selected course box
+      const courseCard = document.getElementById(`course-${categoryParam}`);
+      if (courseCard) {
+        courseCard.scrollIntoView({ behavior: "smooth", block: "center" });
+        courseCard.classList.add("pulse-once");
+        setTimeout(() => courseCard.classList.remove("pulse-once"), 800);
+      }
+
+      // Step 2: Scroll to All Courses section slightly after
+      setTimeout(() => {
+        const section = document.getElementById("courses");
+        if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 800);
+
+      // Step 3: Clean up the URL
+      const cleanURL = window.location.origin + "/";
+      window.history.replaceState({}, "", cleanURL);
     }
+  }, [categoryParam]);
 
-    // Step 2: Wait a bit and then scroll to the All Courses section below
-    setTimeout(() => {
-      const section = document.getElementById("courses");
-      if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 800);
-
-    // Step 3: Clean the URL after navigation
-    const cleanURL = window.location.origin + "/";
-    window.history.replaceState({}, "", cleanURL);
-  }
-}, [categoryParam]);
-
-  // Particle background
+  // Particle animation code (unchanged)
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
