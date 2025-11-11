@@ -7,6 +7,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star, Rocket, Book, Lightbulb } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 
 const benefitIcons = [Star, Rocket, Book, Lightbulb];
 const slides = [
@@ -119,34 +120,39 @@ export default function Home() {
   const ref = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get("category");
+
   // Type for category keys
   type CourseCategory = keyof typeof courseDetails;
   const [activeCategory, setActiveCategory] = useState<CourseCategory | null>(
     null
   );
 
-  // 🔥 Custom Event Listener (Navbar → Main page)
   useEffect(() => {
-    const handleOpenCategory = (e: any) => {
-      setActiveCategory(e.detail);
+  if (categoryParam) {
+    setActiveCategory(categoryParam as CourseCategory);
 
-      // Scroll to the selected category card first
-      const card = document.getElementById(`course-${e.detail}`);
-      if (card) {
-        card.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
+    // Step 1: Scroll to the specific course box first
+    const courseCard = document.getElementById(`course-${categoryParam}`);
+    if (courseCard) {
+      courseCard.scrollIntoView({ behavior: "smooth", block: "center" });
+      // Add a quick pulse animation manually for clarity
+      courseCard.classList.add("pulse-once");
+      setTimeout(() => courseCard.classList.remove("pulse-once"), 800);
+    }
 
-      // Then scroll to the full All Courses section below it
-      setTimeout(() => {
-        const section = document.getElementById("courses");
-        if (section) section.scrollIntoView({ behavior: "smooth" });
-      }, 600);
-    };
+    // Step 2: Wait a bit and then scroll to the All Courses section below
+    setTimeout(() => {
+      const section = document.getElementById("courses");
+      if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 800);
 
-    window.addEventListener("openCourseCategory", handleOpenCategory);
-    return () =>
-      window.removeEventListener("openCourseCategory", handleOpenCategory);
-  }, []);
+    // Step 3: Clean the URL after navigation
+    const cleanURL = window.location.origin + "/";
+    window.history.replaceState({}, "", cleanURL);
+  }
+}, [categoryParam]);
 
   // Particle background
   useEffect(() => {

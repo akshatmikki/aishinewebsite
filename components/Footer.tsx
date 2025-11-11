@@ -3,16 +3,11 @@
 import { motion } from "framer-motion";
 import { Linkedin, Instagram, Youtube, Twitter } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
-  // helper to trigger same event as Navbar
-  const handleOpenCategory = (category: string) => {
-    window.dispatchEvent(
-      new CustomEvent("openCourseCategory", { detail: category })
-    );
-    const section = document.getElementById("courses");
-    if (section) section.scrollIntoView({ behavior: "smooth" });
-  };
+
+  const router = useRouter();
 
   return (
     <motion.footer
@@ -43,7 +38,9 @@ export default function Footer() {
           <ul className="space-y-2 text-gray-700">
             <li>
               <button
-                onClick={() => handleOpenCategory("ai-fundamentals")}
+                onClick={() =>
+                  router.push(`/?category=ai-fundamentals#courses`)
+                }
                 className="hover:text-blue-500 transition-colors text-left w-full cursor-pointer"
               >
                 Student Courses
@@ -51,7 +48,9 @@ export default function Footer() {
             </li>
             <li>
               <button
-                onClick={() => handleOpenCategory("ai-for-business")}
+                onClick={() =>
+                  router.push(`/?category=ai-for-business#courses`)
+                }
                 className="hover:text-blue-500 transition-colors text-left w-full cursor-pointer"
               >
                 AI for Business
@@ -59,7 +58,9 @@ export default function Footer() {
             </li>
             <li>
               <button
-                onClick={() => handleOpenCategory("ai-project-labs")}
+                onClick={() =>
+                  router.push(`/?category=ai-project-labs#courses`)
+                }
                 className="hover:text-blue-500 transition-colors text-left w-full cursor-pointer"
               >
                 AI Projects Lab
@@ -67,7 +68,9 @@ export default function Footer() {
             </li>
             <li>
               <button
-                onClick={() => handleOpenCategory("advanced-ai-topics")}
+                onClick={() =>
+                  router.push(`/?category=advanced-ai-topics#courses`)
+                }
                 className="hover:text-blue-500 transition-colors text-left w-full cursor-pointer"
               >
                 Advanced AI Learning
@@ -85,7 +88,7 @@ export default function Footer() {
                 href="/contactus"
                 className="hover:text-blue-500 transition-colors"
               >
-                Contact
+                Contact Us
               </Link>
             </li>
           </ul>
@@ -111,7 +114,7 @@ export default function Footer() {
           <ul className="space-y-2 text-gray-700">
             <li>
               <Link
-                href="/privacy"
+                href="#"
                 className="hover:text-blue-500 transition-colors"
               >
                 Privacy Policy
@@ -119,7 +122,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                href="/terms"
+                href="#"
                 className="hover:text-blue-500 transition-colors"
               >
                 Terms & Conditions
@@ -127,7 +130,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                href="/refund"
+                href="#"
                 className="hover:text-blue-500 transition-colors"
               >
                 Refund Policy
