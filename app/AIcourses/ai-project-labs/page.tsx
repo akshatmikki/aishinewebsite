@@ -10,7 +10,7 @@ export default function AIInnovatorsLab() {
     {
       number: "Module 1",
       title: "Kickoff – From Ideas to Impact",
-      image: "/cap1.jpg",
+      image: "/projectlabs/capstone project.jpg",
       activities: [
         "Understand the structure of a successful AI project — problem, data, innovation.",
         "Brainstorm real-world challenges across education, health, business, and environment.",
@@ -22,7 +22,7 @@ export default function AIInnovatorsLab() {
     {
       number: "Module 2",
       title: "Design Thinking for AI Projects",
-      image: "/cap2.jpg",
+      image: "/projectlabs/Design.jpg",
       activities: [
         "Apply design thinking steps: empathize, define, ideate, prototype, test.",
         "Structure AI problem statements effectively.",
@@ -34,7 +34,7 @@ export default function AIInnovatorsLab() {
     {
       number: "Module 3",
       title: "Data Exploration & Collection",
-      image: "/cap3.jpg",
+      image: "/projectlabs/data explore.png",
       activities: [
         "Explore open data sources like Kaggle and Google Dataset Search.",
         "Clean, label, and prepare your dataset ethically.",
@@ -46,7 +46,7 @@ export default function AIInnovatorsLab() {
     {
       number: "Module 4",
       title: "Building with No-Code AI Tools",
-      image: "/cap4.jpg",
+      image: "/projectlabs/nocodeai.jpg",
       activities: [
         "Work with tools like Teachable Machine, Pictoblox AI, and Lobe.ai.",
         "Train, test, and refine your first AI models for images, text, or sound.",
@@ -58,7 +58,7 @@ export default function AIInnovatorsLab() {
     {
       number: "Module 5",
       title: "AI for Social Good & Community Impact",
-      image: "/cap5.jpg",
+      image: "/projectlabs/aiforsocial.jpg",
       activities: [
         "Explore AI use cases that improve accessibility, environment, and education.",
         "Add ethical and human-centered design layers to your projects.",
@@ -70,7 +70,7 @@ export default function AIInnovatorsLab() {
     {
       number: "Module 6",
       title: "Enhancing AI Projects with APIs & Integrations",
-      image: "/cap6.jpg",
+      image: "/projectlabs/enhanceai.jpg",
       activities: [
         "Integrate OpenAI, Hugging Face, or Google Vision APIs for new capabilities.",
         "Add multimodal functionality: chatbots, image recognition, or text generation.",
@@ -82,7 +82,7 @@ export default function AIInnovatorsLab() {
     {
       number: "Module 7",
       title: "Building User Interfaces & Demos",
-      image: "/cap7.jpg",
+      image: "/projectlabs/uiinterface.jpg",
       activities: [
         "Create interactive web or app interfaces using Glide, Streamlit, or Scratch for AI.",
         "Showcase your model outputs visually and clearly.",
@@ -94,7 +94,7 @@ export default function AIInnovatorsLab() {
     {
       number: "Module 8",
       title: "Collaboration & Project Management Tools",
-      image: "/cap8.jpg",
+      image: "/projectlabs/collaboration.jpg",
       activities: [
         "Use Notion, Trello, and Miro for organizing and managing your projects.",
         "Assign team roles — AI designer, data lead, dev, and presenter.",
@@ -106,7 +106,7 @@ export default function AIInnovatorsLab() {
     {
       number: "Module 9",
       title: "Testing, Evaluation & Improvement",
-      image: "/cap9.jpg",
+      image: "/projectlabs/evaluation.jpg",
       activities: [
         "Evaluate model accuracy, fairness, and usability.",
         "Iterate based on feedback and impact metrics.",
@@ -118,7 +118,7 @@ export default function AIInnovatorsLab() {
     {
       number: "Module 10",
       title: "Final Showcase – Pitch, Demo & Reflect",
-      image: "/cap10.jpg",
+      image: "/projectlabs/final showcase.png",
       activities: [
         "Deliver a complete presentation — problem, AI solution, demo, and impact.",
         "Participate in mentor evaluations and peer feedback.",
@@ -133,22 +133,22 @@ export default function AIInnovatorsLab() {
     {
       category: "AI for Education",
       build: "Design AI tools to personalize student learning or automate grading.",
-      imageUrl: "/eduai.jpg",
+      imageUrl: "/projectlabs/aiforeducation.jpg",
     },
     {
       category: "AI for Health & Wellness",
       build: "Prototype models for symptom checking, fitness tracking, or mental health support.",
-      imageUrl: "/healthai.jpg",
+      imageUrl: "/projectlabs/aiforhealth.jpg",
     },
     {
       category: "AI for Business",
       build: "Develop smart assistants that automate tasks or provide insights for small businesses.",
-      imageUrl: "/bizia.jpg",
+      imageUrl: "/projectlabs/ai for business.webp",
     },
     {
       category: "AI for Sustainability",
       build: "Use AI to predict pollution, track waste, or optimize energy usage.",
-      imageUrl: "/greenai.jpg",
+      imageUrl: "/projectlabs/aiforsustainability.jpg",
     },
   ];
 

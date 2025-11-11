@@ -10,7 +10,7 @@ export default function AdvancedAIMastery() {
     {
       number: "Module 1",
       title: "The Landscape of Advanced AI",
-      image: "/adv1.jpg",
+      image: "/advancAI/landscape.jpg",
       activities: [
         "Explore the evolution from traditional ML to modern Generative AI.",
         "Understand architectures: transformers, diffusion models, and LLMs.",
@@ -22,7 +22,7 @@ export default function AdvancedAIMastery() {
     {
       number: "Module 2",
       title: "Deep Neural Networks – Beyond Basics",
-      image: "/adv2.jpg",
+      image: "/advancAI/DeepNeuralNetwork.jpg",
       activities: [
         "Dive deeper into CNNs, RNNs, and LSTMs for complex tasks.",
         "Build and train models using Keras or PyTorch Lightning.",
@@ -34,7 +34,7 @@ export default function AdvancedAIMastery() {
     {
       number: "Module 3",
       title: "Transformer Architectures & Large Language Models (LLMs)",
-      image: "/adv3.jpg",
+      image: "/advancAI/LLM.jpg",
       activities: [
         "Dissect attention mechanisms, positional encoding, and token embeddings.",
         "Build custom Transformer-based models using Hugging Face.",
@@ -46,7 +46,7 @@ export default function AdvancedAIMastery() {
     {
       number: "Module 4",
       title: "Fine-Tuning & Custom Training LLMs",
-      image: "/adv4.jpg",
+      image: "/advancAI/finetuningLLM.jpg",
       activities: [
         "Fine-tune with LoRA, PEFT, and QLoRA for efficiency.",
         "Manage data pipelines with Weights & Biases and LangChain.",
@@ -58,7 +58,7 @@ export default function AdvancedAIMastery() {
     {
       number: "Module 5",
       title: "Generative AI – Images, Audio & Video",
-      image: "/adv5.jpg",
+      image: "/advancAI/GenerativeAI.jpg",
       activities: [
         "Work with diffusion models, GANs, and Stable Diffusion pipelines.",
         "Use Midjourney, Leonardo AI, and RunwayML for creative generation.",
@@ -70,7 +70,7 @@ export default function AdvancedAIMastery() {
     {
       number: "Module 6",
       title: "Advanced Prompt Engineering & Retrieval-Augmented Generation (RAG)",
-      image: "/adv6.jpg",
+      image: "/advancAI/RAG.jpg",
       activities: [
         "Craft complex prompts for LLMs and multimodal systems.",
         "Build RAG pipelines using LangChain, Pinecone, and ChromaDB.",
@@ -82,7 +82,7 @@ export default function AdvancedAIMastery() {
     {
       number: "Module 7",
       title: "Autonomous AI Agents & Multi-Agent Systems",
-      image: "/adv7.jpg",
+      image: "/advancAI/AI agents.jpg",
       activities: [
         "Build autonomous agents using AutoGPT, BabyAGI, and Relevance AI.",
         "Coordinate multiple agents using CrewAI and LangGraph.",
@@ -94,7 +94,7 @@ export default function AdvancedAIMastery() {
     {
       number: "Module 8",
       title: "Reinforcement Learning & Decision-Making Systems",
-      image: "/adv8.jpg",
+      image: "/advancAI/decision making.jpg",
       activities: [
         "Explore RL algorithms: Q-learning, PPO, and policy gradients.",
         "Train models in OpenAI Gym and RLlib environments.",
@@ -106,7 +106,7 @@ export default function AdvancedAIMastery() {
     {
       number: "Module 9",
       title: "Explainable & Ethical AI",
-      image: "/adv9.jpg",
+      image: "/advancAI/ethical ai.jpg",
       activities: [
         "Use SHAP, LIME, and Captum for explainability.",
         "Detect and mitigate bias in datasets and predictions.",
@@ -118,7 +118,7 @@ export default function AdvancedAIMastery() {
     {
       number: "Module 10",
       title: "AI for Business Automation & Productivity",
-      image: "/adv10.jpg",
+      image: "/advancAI/business and automation.jpg",
       activities: [
         "Integrate Zapier AI, Make.com, and OpenAI APIs for business automation.",
         "Build smart CRMs and task automation bots.",
@@ -130,7 +130,7 @@ export default function AdvancedAIMastery() {
     {
       number: "Module 11",
       title: "Computer Vision & Multimodal Fusion",
-      image: "/adv11.jpg",
+      image: "/advancAI/computervision.jpg",
       activities: [
         "Implement YOLOv8 for detection and segmentation.",
         "Combine vision-text models like CLIP, BLIP, and Flamingo.",
@@ -142,7 +142,7 @@ export default function AdvancedAIMastery() {
     {
       number: "Module 12",
       title: "Natural Language Understanding & Semantic Search",
-      image: "/adv12.jpg",
+      image: "/advancAI/NLP.jpg",
       activities: [
         "Build semantic search using OpenAI embeddings, Cohere, and Sentence Transformers.",
         "Implement summarization and sentiment pipelines.",
@@ -154,7 +154,7 @@ export default function AdvancedAIMastery() {
     {
       number: "Module 13",
       title: "AI Deployment, APIs & Cloud Integration",
-      image: "/adv13.jpg",
+      image: "/advancAI/AI deploy.jpg",
       activities: [
         "Deploy AI models via FastAPI, Docker, and Streamlit.",
         "Integrate with AWS SageMaker, GCP Vertex, or Hugging Face Spaces.",
@@ -166,7 +166,7 @@ export default function AdvancedAIMastery() {
     {
       number: "Module 14",
       title: "Building Custom AI Tools & Apps",
-      image: "/adv14.jpg",
+      image: "/advancAI/custom ai tools.jpg",
       activities: [
         "Build chatbots and agents using LangChain + OpenAI API.",
         "Use Gradio and Streamlit for AI-powered web apps.",
@@ -178,7 +178,7 @@ export default function AdvancedAIMastery() {
     {
       number: "Module 15",
       title: "The Future of AI – AGI, Multimodality & Next-Gen Systems",
-      image: "/adv15.jpg",
+      image: "/advancAI/AGI.jpg",
       activities: [
         "Explore frontier AI systems: GPT-5, Gemini Ultra, Claude 3 Opus.",
         "Understand the road to AGI: alignment, safety, and collaboration.",
@@ -193,22 +193,22 @@ export default function AdvancedAIMastery() {
     {
       category: "Build a Custom LLM",
       build: "Fine-tune and deploy a lightweight LLM using LoRA or QLoRA and Hugging Face Transformers.",
-      imageUrl: "/llmproject.jpg",
+      imageUrl: "/advancAI/LLMproject.jpg",
     },
     {
       category: "Generative AI Creator",
       build: "Design multimodal generative systems — from text-to-image to text-to-video pipelines.",
-      imageUrl: "/genai.jpg",
+      imageUrl: "/advancAI/Generative AI project.jpg",
     },
     {
       category: "AI Automation System",
       build: "Develop a full automation workflow integrating APIs, LangChain, and business AI tools.",
-      imageUrl: "/aiautomation.jpg",
+      imageUrl: "/advancAI/ai automation project.jpg",
     },
     {
       category: "Capstone Project",
       build: "Combine LLMs, diffusion models, and APIs to build your own next-gen AI application.",
-      imageUrl: "/capstone.jpg",
+      imageUrl: "/advancAI/capstoneproject.jpg",
     },
   ];
 

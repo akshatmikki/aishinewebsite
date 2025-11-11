@@ -10,7 +10,7 @@ export default function AIPoweredBusinessMastery() {
     {
       number: "Module 1",
       title: "Business in the AI Era – The Power of Smart Tools",
-      image: "/biz1.jpg",
+      image: "/businessAI/AI for business.webp",
       activities: [
         "Understand how AI and automation are redefining business operations.",
         "Explore top AI tool categories: marketing, productivity, analytics, and customer experience.",
@@ -22,7 +22,7 @@ export default function AIPoweredBusinessMastery() {
     {
       number: "Module 2",
       title: "Smart Research & Insights Tools",
-      image: "/biz2.jpg",
+      image: "/businessAI/market tools.jpg",
       activities: [
         "Leverage tools like Perplexity, ChatGPT, and Notion AI for market research.",
         "Automate trend analysis and competitor monitoring.",
@@ -34,7 +34,7 @@ export default function AIPoweredBusinessMastery() {
     {
       number: "Module 3",
       title: "Branding & Content Creation Tools",
-      image: "/biz3.jpg",
+      image: "/businessAI/content tools.jpg",
       activities: [
         "Design brand visuals using Canva, Adobe Firefly, and Leonardo AI.",
         "Create brand identity kits and reusable templates.",
@@ -46,7 +46,7 @@ export default function AIPoweredBusinessMastery() {
     {
       number: "Module 4",
       title: "Social Media & Marketing Automation",
-      image: "/biz4.jpg",
+      image: "/businessAI/social media tools.jpg",
       activities: [
         "Automate posting with Buffer, Metricool, and Hootsuite.",
         "Use AI tools for captions, scheduling, and analytics tracking.",
@@ -58,7 +58,7 @@ export default function AIPoweredBusinessMastery() {
     {
       number: "Module 5",
       title: "Copywriting, Ads & Sales Funnels",
-      image: "/biz5.jpg",
+      image: "/businessAI/copywriting tools.png",
       activities: [
         "Generate persuasive ad and email copy using Copy.ai, Jasper, and Writesonic.",
         "Build and optimize funnels and ad campaigns automatically.",
@@ -70,7 +70,7 @@ export default function AIPoweredBusinessMastery() {
     {
       number: "Module 6",
       title: "Website & Landing Page Builders",
-      image: "/biz6.jpg",
+      image: "/businessAI/landing tools.png",
       activities: [
         "Design landing pages with Durable, Framer, or Wix ADI in minutes.",
         "Generate website copy and visuals using AI assistants.",
@@ -82,7 +82,7 @@ export default function AIPoweredBusinessMastery() {
     {
       number: "Module 7",
       title: "Productivity, Collaboration & Automation Tools",
-      image: "/biz7.jpg",
+      image: "/businessAI/copywriting tools.png",
       activities: [
         "Manage tasks with ClickUp, Notion, and Trello AI.",
         "Automate workflows using Zapier and Make.com.",
@@ -94,7 +94,7 @@ export default function AIPoweredBusinessMastery() {
     {
       number: "Module 8",
       title: "Customer Engagement & Support Tools",
-      image: "/biz8.jpg",
+      image: "/businessAI/customer.jpg",
       activities: [
         "Build chatbots using Manychat, Intercom, and Chatbase.",
         "Personalize CRM interactions with AI-driven insights.",
@@ -106,7 +106,7 @@ export default function AIPoweredBusinessMastery() {
     {
       number: "Module 9",
       title: "Business Analytics & Decision-Making Tools",
-      image: "/biz9.jpg",
+      image: "/businessAI/business analytics.jpg",
       activities: [
         "Use Google Looker, Tableau, and Power BI for data visualization.",
         "Combine multiple data sources for deeper insights.",
@@ -118,7 +118,7 @@ export default function AIPoweredBusinessMastery() {
     {
       number: "Module 10",
       title: "AI Tools for Sales & Lead Generation",
-      image: "/biz10.jpg",
+      image: "/businessAI/AI lead and sales.jpg",
       activities: [
         "Generate and qualify leads using Apollo, Clay, and PhantomBuster.",
         "Automate outreach campaigns and scoring systems.",
@@ -130,7 +130,7 @@ export default function AIPoweredBusinessMastery() {
     {
       number: "Module 11",
       title: "Financial Management & AI Accounting Tools",
-      image: "/biz11.jpg",
+      image: "/businessAI/financial and accounting.jpg",
       activities: [
         "Simplify finance tracking using QuickBooks AI, Fyle, and Zoho Books.",
         "Automate expense reports, invoicing, and budget insights.",
@@ -142,7 +142,7 @@ export default function AIPoweredBusinessMastery() {
     {
       number: "Module 12",
       title: "Scaling with AI Agents & Future Tools",
-      image: "/biz12.jpg",
+      image: "/businessAI/scaling with ai.jpg",
       activities: [
         "Create AI agents for task automation using ChatGPT, AgentGPT, and Relevance AI.",
         "Explore AI voice/video for personalized marketing and sales.",
@@ -157,22 +157,22 @@ export default function AIPoweredBusinessMastery() {
     {
       category: "AI Marketing Campaign",
       build: "Create and automate a full marketing campaign using AI tools for design, copy, and analytics.",
-      imageUrl: "/aimarketing.jpg",
+      imageUrl: "/businessAI/ai marketing compaign.jpg",
     },
     {
       category: "Smart Business Dashboard",
       build: "Build a live business analytics dashboard using AI insights tools like Looker or Power BI.",
-      imageUrl: "/dashboard.jpg",
+      imageUrl: "/businessAI/smart business.jpg",
     },
     {
       category: "Automation Blueprint",
       build: "Design an AI-powered workflow using Zapier or Make.com to automate daily tasks.",
-      imageUrl: "/automation.jpg",
+      imageUrl: "/businessAI/ai business automation.jpg",
     },
     {
       category: "AI Sales Assistant",
       build: "Build a chatbot that engages leads, answers FAQs, and captures new prospects automatically.",
-      imageUrl: "/aisales.jpg",
+      imageUrl: "/businessAI/sales assitant.jpg",
     },
   ];
 
