@@ -12,6 +12,7 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
   const navItems = [
@@ -33,6 +34,7 @@ export default function Navbar() {
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <div className="relative w-full z-50">
@@ -63,14 +65,7 @@ export default function Navbar() {
                       <button
                         key={subIdx}
                         onClick={() => {
-                          window.dispatchEvent(
-                            new CustomEvent("openCourseCategory", {
-                              detail: sub.category,
-                            })
-                          );
-                          const section = document.getElementById("courses");
-                          if (section)
-                            section.scrollIntoView({ behavior: "smooth" });
+                          router.push(`/?category=${sub.category}#courses`);
                         }}
                         className="block w-full text-left px-4 py-2 text-neutral-700 dark:text-neutral-300 hover:bg-indigo-50 dark:hover:bg-zinc-800 transition-colors cursor-pointer"
                       >
@@ -152,14 +147,8 @@ export default function Navbar() {
                       <button
                         key={subIdx}
                         onClick={() => {
-                          window.dispatchEvent(
-                            new CustomEvent("openCourseCategory", {
-                              detail: sub.category,
-                            })
-                          );
-                          const section = document.getElementById("courses");
-                          if (section)
-                            section.scrollIntoView({ behavior: "smooth" });
+                          router.push(`/?category=${sub.category}#courses`);
+                          //setIsMobileMenuOpen(false);
                         }}
                         className="block w-full text-left px-4 py-2 text-neutral-700 dark:text-neutral-300 hover:bg-indigo-50 dark:hover:bg-zinc-800 transition-colors"
                       >
