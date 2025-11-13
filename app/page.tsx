@@ -6,10 +6,9 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star, Rocket, Book, Lightbulb } from "lucide-react";
+import { Star, Rocket, Book, Lightbulb, MessageSquare } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 
-const benefitIcons = [Star, Rocket, Book, Lightbulb];
 const slides = [
   {
     id: 1,
@@ -109,15 +108,30 @@ const courseDetails = {
 };
 
 const benefits = [
-  { title: "Interactive Learning", desc: "Hands-on labs & projects" },
-  { title: "AI Mentors", desc: "Personalized 1:1 mentor guidance" },
-  { title: "Certification", desc: "Globally recognized credentials" },
-  { title: "Hybrid Mode", desc: "Learn online & in-person" },
+  {
+    title: "Interactive Learning",
+    desc: "Hands-on labs & projects",
+    icon: Star,
+  },
+  { title: "AI Mentors", desc: "Personalized guidance", icon: Rocket },
+  {
+    title: "Certification",
+    desc: "Globally recognized credentials",
+    icon: Book,
+  },
+  {
+    title: "Hybrid Method",
+    desc: "Self paced & instructor led learning",
+    icon: Lightbulb,
+  },
+  { title: "AI Chat Bot", desc: "24/7 query support", icon: MessageSquare },
 ];
 
 export default function Home() {
   return (
-    <Suspense fallback={<div className="text-center py-20 text-lg">Loading...</div>}>
+    <Suspense
+      fallback={<div className="text-center py-20 text-lg">Loading...</div>}
+    >
       <HomeContent />
     </Suspense>
   );
@@ -133,7 +147,9 @@ function HomeContent() {
 
   // Type for category keys
   type CourseCategory = keyof typeof courseDetails;
-  const [activeCategory, setActiveCategory] = useState<CourseCategory | null>(null);
+  const [activeCategory, setActiveCategory] = useState<CourseCategory | null>(
+    null
+  );
 
   useEffect(() => {
     if (categoryParam) {
@@ -150,7 +166,8 @@ function HomeContent() {
       // Step 2: Scroll to All Courses section slightly after
       setTimeout(() => {
         const section = document.getElementById("courses");
-        if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (section)
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 800);
 
       // Step 3: Clean up the URL
@@ -413,22 +430,22 @@ function HomeContent() {
         >
           Why Choose <span className="text-pink-500">AIshine</span>
         </motion.h2>
-        <div className="relative grid md:grid-cols-4 gap-8 max-w-6xl mx-auto z-10">
-          {benefits.map((b, i) => {
-            const Icon = benefitIcons[i % benefitIcons.length];
-            return (
+        <div className="relative flex flex-col items-center justify-center gap-10 z-10">
+          {/* First row - 3 boxes */}
+          <div className="flex flex-wrap justify-center gap-8">
+            {benefits.slice(0, 3).map((b, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.2 }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
                 whileHover={{ scale: 1.05 }}
                 className="flex"
               >
-                <Card className="flex flex-col justify-between items-center text-center w-full h-full min-h-[260px] p-6 rounded-3xl border border-transparent bg-gradient-to-br from-white/80 to-pink-50/20 dark:from-zinc-800/70 dark:to-zinc-900/50 shadow-md hover:shadow-pink-400/20 hover:border-pink-300/40 dark:hover:border-pink-500/40 transition-all duration-500 ease-out">
+                <Card className="flex flex-col justify-between items-center text-center w-[250px] h-[260px] p-6 rounded-3xl border border-transparent bg-gradient-to-br from-white/80 to-pink-50/20 dark:from-zinc-800/70 dark:to-zinc-900/50 shadow-md hover:shadow-pink-400/20 hover:border-pink-300/40 dark:hover:border-pink-500/40 transition-all duration-500 ease-out">
                   <CardHeader className="flex flex-col items-center gap-3 relative z-10">
                     <div className="bg-pink-100 dark:bg-zinc-700 p-4 rounded-full inline-flex">
-                      <Icon className="w-7 h-7 text-pink-500 dark:text-pink-400" />
+                      <b.icon className="w-7 h-7 text-pink-500 dark:text-pink-400" />
                     </div>
                     <CardTitle className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
                       {b.title}
@@ -441,8 +458,38 @@ function HomeContent() {
                   </CardContent>
                 </Card>
               </motion.div>
-            );
-          })}
+            ))}
+          </div>
+
+          {/* Second row - 2 boxes */}
+          <div className="flex flex-wrap justify-center gap-8">
+            {benefits.slice(3, 5).map((b, i) => (
+              <motion.div
+                key={i + 3}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: (i + 3) * 0.15 }}
+                whileHover={{ scale: 1.05 }}
+                className="flex"
+              >
+                <Card className="flex flex-col justify-between items-center text-center w-[250px] h-[260px] p-6 rounded-3xl border border-transparent bg-gradient-to-br from-white/80 to-pink-50/20 dark:from-zinc-800/70 dark:to-zinc-900/50 shadow-md hover:shadow-pink-400/20 hover:border-pink-300/40 dark:hover:border-pink-500/40 transition-all duration-500 ease-out">
+                  <CardHeader className="flex flex-col items-center gap-3 relative z-10">
+                    <div className="bg-pink-100 dark:bg-zinc-700 p-4 rounded-full inline-flex">
+                      <b.icon className="w-7 h-7 text-pink-500 dark:text-pink-400" />
+                    </div>
+                    <CardTitle className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+                      {b.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="relative z-10 flex-grow flex items-center">
+                    <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                      {b.desc}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
