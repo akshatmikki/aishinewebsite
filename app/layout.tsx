@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Shine"
+  title: "Privacy Policy | AIShine",
 };
 
 export default function RootLayout({

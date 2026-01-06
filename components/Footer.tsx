@@ -6,7 +6,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Footer() {
-
   const router = useRouter();
 
   return (
@@ -114,26 +113,15 @@ export default function Footer() {
           <ul className="space-y-2 text-gray-700">
             <li>
               <Link
-                href="#"
+                href="/privacy-policy"
                 className="hover:text-blue-500 transition-colors"
               >
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link
-                href="#"
-                className="hover:text-blue-500 transition-colors"
-              >
+              <Link href="/terms-conditions" className="hover:text-blue-500 transition-colors">
                 Terms & Conditions
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="hover:text-blue-500 transition-colors"
-              >
-                Refund Policy
               </Link>
             </li>
           </ul>
