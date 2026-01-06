@@ -8,7 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | AIShine",
+  title: "AIShine",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
