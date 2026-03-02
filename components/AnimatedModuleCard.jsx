@@ -19,20 +19,33 @@ export function AnimatedModuleCard({ module }) {
           />
         </div>
       </div>
+
       <div className="flex-1">
-        <div className="flex items-center gap-3 mb-1">
-          <span className="inline-block px-3 py-1 rounded-full bg-purple-400 text-white font-medium text-xs shadow">
-            {module.number}
-          </span>
+
+        {/* 🔹 Combined Heading */}
+        <h3 className="font-bold text-xl mb-2 text-white">
+          {module.number} : {module.title}
+        </h3>
+
+        {/* 🔹 Intro Line in White */}
+        {module.intro && (
+          <p className="text-white mb-4">
+            {module.intro}
+          </p>
+        )}
+
+        {/* 🔹 Activities Label */}
+        <div className="text-md font-semibold mb-1 text-white">
+          Activities :
         </div>
-        <h3 className="font-bold text-xl mb-2">{module.title}</h3>
-        <div className="text-md font-semibold mb-1">Activities</div>
-        <ul className="list-disc ml-5 mb-2 text-base">
+
+        <ul className="list-disc ml-5 mb-3 text-white">
           {module.activities.map((act, i) => (
             <li key={i}>{act}</li>
           ))}
         </ul>
-        <div className="bg-gray-100 dark:bg-zinc-700 rounded p-3 mb-1">
+
+        <div className="bg-gray-100 dark:bg-zinc-700 rounded p-3">
           <span className="font-semibold text-gray-900 dark:text-white">
             Takeaway:
           </span>{" "}
