@@ -31,107 +31,127 @@ export default function AIFundamentals() {
   ];
 
   const modules = [
-    {
-      number: "Module 1",
-      title: "What is AI? Use of AI in daily life and shaping our future.",
-      image: "/m1.jpeg",
-      activities: [
-        "Exploring the basics of AI and its impact on daily life.",
-        "Future trends and opportunities with AI.",
-      ],
-      takeaway: "Understand the fundamentals of AI and how it is transforming everyday activities.",
-    },
-    {
-      number: "Module 2",
-      title: "Intro to AI tools for smarter learning, research, and creativity.",
-      image: "/m2.jpeg",
-      activities: [
-        "Introducing ChatGPT, Gemini, and Perplexity AI.",
-        "Hands-on with popular AI tools for research and study.",
-      ],
-      takeaway: "Learn how to harness AI tools to supercharge learning and creativity.",
-    },
-    {
-      number: "Module 3",
-      title: "Welcome to AI Creativity Workshops.",
-      image: "/m3.jpeg",
-      activities: [
-        "Exploring Midjourney, Higgsfield AI, Ideogram, Runway ML, DALL·E, Krea, Sounddraw, and Beatoven.",
-        "Creating with the latest generative AI tools for images, music, and more.",
-      ],
-      takeaway: "Experience creativity with top tools for graphics, video, music, and design.",
-    },
-    {
-      number: "Module 4",
-      title: "How AI Transforms Presentations, Websites, and Public Speaking.",
-      image: "/m4.jpeg",
-      activities: [
-        "Using Gamma.app, Loom AI, Notion AI, Rewordify, and Otter AI.",
-        "Hands-on projects in digital storytelling and smart docs.",
-      ],
-      takeaway: "Master AI-powered communication for study and beyond.",
-    },
-    {
-      number: "Module 5",
-      title: "AI & Websites: Basic Web Development.",
-      image: "/m5.jpeg",
-      activities: [
-        "Building a website using Lovable AI.",
-        "Exploring website creation using Wix AI.",
-      ],
-      takeaway: "Gain practical skills in no-code AI web development.",
-    },
-    {
-      number: "Module 6",
-      title: "Game Development with AI.",
-      image: "/m6.jpeg",
-      activities: [
-        "Using Gemini/ChatGPT for game logic and design.",
-        "Database storage basics with Supabase and Edge Functions.",
-      ],
-      takeaway: "Discover how to build smart games & manage game data with the latest AI tools.",
-    },
-    {
-      number: "Module 7",
-      title: "AI Avatars—What Are They and How Do They Work?",
-      image: "/avatar.jpg",
-      activities: [
-        "Introducing SUNO AI, Eleven Labs, HeyGen, CapCut, and Canva.",
-        "Lab: Make your first talking avatar.",
-      ],
-      takeaway: "Learn to create and use AI video and voice avatars for storytelling.",
-    },
-    {
-      number: "Module 8",
-      title: "Creating Advanced GPT Bots and Custom Instructions.",
-      image: "/m8.webp",
-      activities: [
-        "Build custom GPTs and explore the GPT Store.",
-        "Hands-on with real use cases.",
-      ],
-      takeaway: "Go beyond basic chat by designing your own AI assistants.",
-    },
-    {
-      number: "Module 9",
-      title: "Building AI Agents (F.R.I.D.A.Y. Concept from Ironman).",
-      image: "/agent.jpg",
-      activities: [
-        "Components: process, workflow, automation, trigger, filter, action.",
-        "Project: Your first simple digital agent.",
-      ],
-      takeaway: "Understand multi-step AI systems and build your own helper bot.",
-    },
-    {
-      number: "Module 10",
-      title: "Recap and Responsible Use of AI.",
-      image: "/m10.png",
-      activities: [
-        "Ethics, fact checking, critical thinking.",
-        "Review of all modules and responsible use best practices.",
-      ],
-      takeaway: "Finish up with a strong ethical foundation for your future AI journey.",
-    },
-  ];
+  {
+    number: "Module 1",
+    title: "Introduction to AI",
+    intro: "Unlock what AI really is and explore.",
+    image: "/m1.jpeg",
+    activities: [
+      "Understand what Artificial Intelligence actually means in simple terms.",
+      "Discover real-life examples like smart assistants, recommendations, and automation.",
+    ],
+    takeaway:
+      "Understand the fundamentals of AI and how it is transforming everyday activities.",
+  },
+  {
+    number: "Module 2",
+    title: "Introduction to AI Tools",
+    intro: "Dive into the coolest AI tools.",
+    image: "/m2.jpeg",
+    activities: [
+      "Explore powerful tools like ChatGPT, Gemini, and Perplexity AI.",
+      "Hands-on with popular AI tools for research and study.",
+    ],
+    takeaway:
+      "Learn how to harness AI tools to supercharge learning and creativity.",
+  },
+  {
+    number: "Module 3",
+    title: "AI Tool Creativity Workshop",
+    intro: "Jump into hands-on activities.",
+    image: "/m3.jpeg",
+    activities: [
+      "Exploring Midjourney, Higgsfield AI, Ideogram, Runway ML, DALL·E, Krea, Sounddraw, and Beatoven.",
+      "Creating with the latest generative AI tools for images, music, and more.",
+    ],
+    takeaway:
+      "Experience creativity with top tools for graphics, video, music, and design. Creativity grows when humans and AI collaborate.",
+  },
+  {
+    number: "Module 4",
+    title: "AI Presentations",
+    intro: "Use AI to craft stunning presentations.",
+    image: "/m4.jpeg",
+    activities: [
+      "Using Gamma.app, Yoodli AI, Notion AI, Rewordify, and Otter AI.",
+      "Hands-on projects in digital storytelling and smart docs.",
+    ],
+    takeaway:
+      "AI can turn your ideas into impactful visual stories and presentations.",
+  },
+  {
+    number: "Module 5",
+    title: "Building Websites",
+    intro: "Build sleek, modern websites with AI.",
+    image: "/m5.jpeg",
+    activities: [
+      "Building a website using Lovable AI.",
+      "Exploring website creation using Wix AI.",
+    ],
+    takeaway:
+      "Gain practical skills in no-code AI web development. You don’t need to be a coder to start building online.",
+  },
+  {
+    number: "Module 6",
+    title: "Game Development with AI",
+    intro: "Develop your own games.",
+    image: "/m6.jpeg",
+    activities: [
+      "Using Lovable AI for game logic and design.",
+      "Database storage basics with Supabase.",
+    ],
+    takeaway:
+      "Discover how to build smart games & manage game data with the latest AI tools.",
+  },
+  {
+    number: "Module 7",
+    title: "AI Avatars",
+    intro: "Create expressive digital avatars.",
+    image: "/avatar.jpg",
+    activities: [
+      "Introducing SUNO AI, Eleven Labs, and HeyGen.",
+      "Understand how avatars enhance communication and engagement – Make your first talking avatar.",
+    ],
+    takeaway:
+      "Your digital identity can be as creative as your imagination.",
+  },
+  {
+    number: "Module 8",
+    title: "Build Your AI Bot",
+    intro: "Design your personal AI chatbot and teach it how to respond, help, and interact.",
+    image: "/m8.webp",
+    activities: [
+      "Learn how chatbots are structured and trained.",
+      "Build and customize responses for specific use cases.",
+    ],
+    takeaway:
+      "Go beyond basic chat by designing your own AI assistants.",
+  },
+  {
+    number: "Module 9",
+    title: "Build Your First App & Business Plan",
+    intro: "Launch your first app and learn how to turn big ideas into a real business strategy.",
+    image: "/agent.jpg",
+    activities: [
+      "Creating an App using the Rocket.new tool.",
+      "Create a basic business model and pitching strategy.",
+    ],
+    takeaway:
+      "Big ideas become powerful when combined with execution and strategy.",
+  },
+  {
+    number: "Module 10",
+    title: "Recap – Finale",
+    intro: "Show off everything you built, celebrate achievements, and prepare for your next AI journey.",
+    image: "/m10.png",
+    activities: [
+      "Present projects and reflect on learning growth.",
+      "Plan next steps in AI exploration and innovation.",
+    ],
+    takeaway:
+      "Finish up with a strong ethical foundation for your future AI journey. This is not the end — it’s the beginning of your AI journey.",
+  },
+];
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-900 to-purple-900 text-white font-sans">
