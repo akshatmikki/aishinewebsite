@@ -8,27 +8,37 @@ import { AnimatedModuleCard } from '@/components/AnimatedModuleCard';
 
 export default function AIFundamentals() {
   const projects = [
-    {
-      category: "AI Blog Site",
-      build: "They'll make a full blog with AI-generated images and stories.",
-      imageUrl: "/blog.jpg"
-    },
-    {
-      category: "Cartoon Quiz App",
-      build: "Kids build a quiz app about cartoons, animals, or science, powered by AI.",
-      imageUrl: "/cartoon.jpg"
-    },
-    {
-      category: "Interactive Chatbot",
-      build: "Make a chatbot that gives facts, tells jokes, or guides site visitors.",
-      imageUrl: "/chatbot.webp"
-    },
-    {
-      category: "Video Explainer",
-      build: "Script and produce an educational or fun explainer video with avatars and AI voices.",
-      imageUrl: "/video.jpg"
-    },
-  ];
+  {
+    category: "AI-Powered Presentation",
+    build: "Students will design a story-driven presentation using AI tools, combining visuals, storytelling, and smart content generation.",
+    imageUrl: "/m4.jpeg"
+  },
+  {
+    category: "Personal Website",
+    build: "Students will build their own modern website, using AI to generate layout ideas, content, and creative design elements.",
+    imageUrl: "/blog.jpg"
+  },
+  {
+    category: "Mini Game with AI",
+    build: "Students will create a simple interactive game, designing characters, gameplay ideas, and fun mechanics with AI assistance.",
+    imageUrl: "/cartoon.jpg"
+  },
+  {
+    category: "AI Avatar Character",
+    build: "Students will create a digital AI avatar that can be used for storytelling, presentations, or content creation.",
+    imageUrl: "/avatar.jpg"
+  },
+  {
+    category: "Personal AI Chatbot",
+    build: "Students will design and train their own AI chatbot that can answer questions, share information, or interact with users.",
+    imageUrl: "/chatbot.webp"
+  },
+  {
+    category: "First AI App & Business Idea",
+    build: "Students will build a basic AI-powered app concept and develop a mini business plan to present their innovation.",
+    imageUrl: "/video.jpg"
+  }
+];
 
   const modules = [
   {
@@ -182,7 +192,7 @@ export default function AIFundamentals() {
           ✨ What Your Child Will Create
         </h2>
         <p className="text-center text-xl text-purple-300 mb-16 max-w-3xl mx-auto">
-          This course is <b>100% project-based</b>—they will build and share a portfolio of incredible work.
+          This course is <b>100% project-based</b>—students will build and showcase a portfolio of exciting AI-powered creations.
         </p>
         <BentoGrid items={projects} />
       </section>
@@ -191,20 +201,22 @@ export default function AIFundamentals() {
         <div className="bg-purple-700 bg-opacity-40 rounded-xl p-8 shadow-lg mb-8">
           <h3 className="text-2xl font-semibold mb-4">Learning Outcomes</h3>
           <ul className="list-disc list-inside space-y-2 text-purple-200">
-            <li>Build a personal smart AI assistant for studies and daily ideas</li>
-            <li>Create no-code websites and interactive quizzes</li>
-            <li>Develop presentations, comics, images, and creative storytelling</li>
-            <li>Produce a mini-podcast or video explainer using AI voice tools</li>
+            <li>Understand the fundamentals of Artificial Intelligence and how it works in the real world.</li>
+            <li>Learn to use powerful AI tools to create presentations, websites, games, avatars, and chatbots.</li>
+            <li>Develop creative problem-solving skills by building hands-on AI projects.</li>
+            <li>Gain practical digital skills that combine technology, creativity, and innovation.</li>
+            <li>Build confidence to design apps, explore AI careers, and think like a future innovator.</li>
           </ul>
         </div>
 
         <div className="bg-purple-700 bg-opacity-40 rounded-xl p-8 shadow-lg">
           <h3 className="text-2xl font-semibold mb-4">Why This Course?</h3>
           <ul className="list-disc list-inside space-y-2 text-purple-200">
-            <li>Personalized mentorship</li>
-            <li>Project-based, hands-on learning</li>
-            <li>Globally recognized certification provided</li>
-            <li>Confidence, creativity, and real-world portfolio gains</li>
+            <li>Future-Ready Skills – AI is transforming every industry, and early exposure builds a strong foundation.</li>
+            <li>Hands-On Learning – Students don’t just learn theory; they build real projects with AI tools.</li>
+            <li>Creativity + Technology – The course blends imagination with cutting-edge AI capabilities.</li>
+            <li>Beginner Friendly – No coding or prior technical knowledge required.</li>
+            <li>Confidence & Innovation – Students learn how to turn ideas into real digital creations.</li>
           </ul>
         </div>
       </section>
