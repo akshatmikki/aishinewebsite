@@ -16,7 +16,7 @@ export default function AIFundamentals() {
   {
     category: "Personal Website",
     build: "Students will build their own modern website, using AI to generate layout ideas, content, and creative design elements.",
-    imageUrl: "/blog.jpg"
+    imageUrl: "/m3.jpeg"
   },
   {
     category: "Mini Game with AI",
